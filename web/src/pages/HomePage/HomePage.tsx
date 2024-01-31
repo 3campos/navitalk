@@ -1,4 +1,5 @@
-import { Button, ButtonGroup, Grid } from '@mui/material'
+import { Button } from '@mui/material'
+import Grid from '@mui/material/Unstable_Grid2/Grid2'
 
 import { Link, routes } from '@redwoodjs/router'
 import { Metadata } from '@redwoodjs/web'
@@ -7,7 +8,6 @@ const HomePage = () => {
   return (
     <>
       <Metadata title="Home" description="Home page" />
-
       <h1>HomePage</h1>
       <p>
         Find me in <code>./web/src/pages/HomePage/HomePage.tsx</code>
@@ -16,7 +16,7 @@ const HomePage = () => {
         My default route is named <code>home</code>, link to me with `
         <Link to={routes.home()}>Home</Link>`
       </p>
-      <Grid container>
+      <Grid container spacing={2}>
         <Grid item xs={12} sm={4} md={4}>
           <Link to={routes.personalBiography()}>
             <Button variant="contained" sx={{ width: '10rem', margin: 1 }}>
