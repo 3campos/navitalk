@@ -16,7 +16,16 @@ const HomePage = () => {
         My default route is named <code>home</code>, link to me with `
         <Link to={routes.home()}>Home</Link>`
       </p>
-      <Grid container spacing={2}>
+      <Grid
+        container
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          flexDirection: 'column',
+          p: 1,
+          m: 1,
+        }}
+      >
         <Grid item xs={12} sm={4} md={4}>
           <Link to={routes.personalBiography()}>
             <Button variant="contained" sx={{ width: '10rem', margin: 1 }}>
